@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>KryptoGra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <div>
+            <img src="idea.png" width="15" height="15"><span id="podpowiedz"></span><br>
+            Punkty: <span id="punkty"></span>
+        </div>
+        <div>
+            <img src ="KryptoGra.png">
+        </div>
+        <div>
+            <p onclick="openModal()" id="help">Utknąłeś?</p>
+        </div>
+    </div>
+    
+    <article>
+        <p id="tresc">Wczytywanie pytania</p>
+        <p id="zagadka"></p>
+        <input id="odp" size="70">
+        <span id="win">Brawo czy chcesz kontynuować? <button onclick="refresh(true)">Tak</button><button onclick="refresh(false)">Nie</button></span>
+    </article>
+
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Nie masz pomusłu?</h2>
+              </div>
+              <div class="modal-body">
+                <p>Nie używaj polskich znaków</p>
+                <button onclick="kupPodp()">Podpowiedz 1 <img src="idea.png" width="15" height="15"></button>
+                <button onclick="kupOdp()">Odpowiedz 3 <img src="idea.png" width="15" height="15"></button>
+                <p id="miejscePodp"></p>
+                <p id="miejsceOdp"></p>
+              </div>
+        </div>
+    </div>
+    <div id="footer">
+        <span>Poddajesz się? </span><button onclick="refresh(false)">Tak</button></span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
